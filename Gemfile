@@ -35,9 +35,14 @@ end
 gem 'rails_admin'
 gem "cancan"
 gem 'devise'
+# for bindings
 gem 'pry'
+# for postgre to deploy on heroku
 gem 'pg'
 gem 'rails_12factor', group: :production
+# For dumping Rails Db data
+gem 'seed_dump'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
