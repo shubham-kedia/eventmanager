@@ -1,0 +1,106 @@
+<% @count=0%>
+<section class="main">
+<div class="container">
+    <!-- SINGLE Event -->
+    <%@events.each do |event|%>
+    <div class="col-md-3">
+      <div class="item item-1">
+        <div class="item-overlay">
+        </div>
+        <div class="item-content">
+          <div class="item-top-content">
+            <div class="item-top-content-inner">
+              <div class="item-product">
+                <div class="item-top-title">
+                  <h5><%=event.name%></h5>  <!-- EVENT TITLE-->
+                  <p class="subdescription">
+                    <% if event.short_desc.present?%>
+                    <%= event.short_desc%>
+                    <%else%>
+                    No description
+                    <%end%>
+                  </p> <!-- EVENT DESCRIPTION-->
+                  <p class="subdescription">
+                  Start From: <%=event.startfrom.to_time.strftime("%d-%m-%y %H:%M")%>
+                  </p>
+                </div>
+              </div>
+              <div class="item-product-price">
+                <!-- PRICE -->
+                <% if user_signed_in?%>
+                <%if !current_user.gender?%>
+                <span class="price-num green-text">₹
+                <%= event.entry_fee%>
+                </span> 
+                <%else%>
+                <span class="price-num green-text">₹
+                <%= event.entry_fee-0.05*event.entry_fee%>
+                </span>
+                <%end%>
+                <%else%>
+                <span class="price-num green-text">₹
+                  <%= event.entry_fee%>
+                </span> 
+                <%end%>
+                <!-- OLD PRICE START -->
+                <p class="subdescription">
+                  ₹<%= event.entry_fee%>
+                </p>
+                <div class="old-price">
+                </div> <!-- END OLD PRICE -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM HOVER CONTENT-->
+          <div class="item-add-content">
+            <div class="item-add-content-inner">
+              <div class="section">
+                <p>
+                <% if event.long_desc.present?%>
+                  <%= event.long_desc%>
+                  <%else%>
+                  No description Available
+                  <%end%>
+                </p>
+              </div>
+              <div class="section">
+                <a href="/event/show/<%=event.id%>" class="btn btn-primary custom-button red-btn not-logged">Details</a><br/>
+                <div style="width:100%">
+                <% if user_signed_in? %>
+                <% if @user_events.include?(event) %>
+                <%#binding.pry%>
+                <a href="/event/unattend/<%=event.id%>" class="btn btn-primary custom-button green-btn" data-id=<%=event.id%>>Unattend</a> 
+                <%else%>               
+                <a href="/event/attend/<%=event.id%>" class="btn btn-primary custom-button blue-btn" data-id=<%=event.id%>>Attend</a> 
+                <%end%>
+                <%else%>
+                <a href="/users/sign_in" class="btn btn-primary custom-button green-btn not-logged">Attend</a> 
+                <%end%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- / END FIRST ITEM -->
+    <%end%>
+    <!-- Modals -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mymodal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Error</h3>
+          </div>
+          <div class="modal-body">
+            <p>You Cant Attend this Event</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

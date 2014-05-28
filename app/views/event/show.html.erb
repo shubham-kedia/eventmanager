@@ -1,0 +1,38 @@
+<section class="main">
+  <div class="container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="event_info">
+        <p><h1><%= @event.name%></h1></p>
+        <br>
+        <%if !current_user.gender?%>
+        <p>Entry Fee: <b>₹ <%=@event.entry_fee%></b></p>
+        <%else%>
+        <p>Entry Fee: <b>₹ <%=@event.entry_fee-0.05*@event.entry_fee%></b></p>
+        <%end%>
+        <p>Started On: <b><%=@event.startfrom%></b></p>
+        <p>Ended On: <b><%=@event.endon%></b></p>
+        <p>No of Users Attending: <b><%=@event.users.count%></b></p>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+
+  </div>
+  <div class="container">
+    <div class="seperator"><b>User Attending this Event</b></div>
+  </div>
+  <div class="container">
+    <%@event.users.each do |user|%>
+    <div class="col-md-4">
+      <div class="user_info">
+        <p><h1><%= user.username%></h1></p>
+        <%if user.gender%>
+        <p>Gender:<b>Female</b></p>
+        <%else%>
+        <p>Gender:<b>Male</b></p>
+        <%end%>
+      </div>
+    </div>
+    <%end%>
+  </div>
+</section>

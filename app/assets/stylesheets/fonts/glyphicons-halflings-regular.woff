@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+			<meta name="description" content="We are dedicated to creating beautiful &amp; responsive website templates.">
+			<meta name="author" content="">
+			<link rel="shortcut icon" href="http://swoopthemes.com/templates/logg/fonts/assets/ico/favicon.ico">
+
+			<title>SwoopThemes</title>
+
+			<!-- Bootstrap core CSS -->
+			<link href="http://swoopthemes.com/templates/logg/fonts/css/bootstrap.min.css" rel="stylesheet">
+
+			<!-- Custom styles for this template -->
+			<link href="http://swoopthemes.com/templates/logg/fonts/css/custom.css" rel="stylesheet">
+			
+			<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+			<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700,300|Lato:400,300' rel='stylesheet' type='text/css'>
+
+			<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		</head>
+
+		<body>
+			<div id="topWrap" class="jumbotron">
+			<div class="container">
+				<div class="col-xs-12 jumboText">
+					<h1>We are SwoopThemes</h1>
+					<h2>We make beautiful and responsive website templates</h2>
+					<a class="btn btn-default btn-lg" href="glyphicons-halflings-regular.woff#productWrap">View our templates</a>
+				</div>
+				
+			</div>
+				<img class="logo" src="http://swoopthemes.com/templates/logg/fonts/assets/img/logo.jpg"/>
+			</div>
+
+	<div id="featureWrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="sectionTitle">About Us</h2>
+					<hr/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 text-center about">
+					<p>
+					The internet is a beautiful place, or at least it should be. We'd like to help with that. Our vision is simple, create stunning website templates as a starting point for you or your business. Our themes are clean, readable, and built with Bootstrap. Check them out below!
+					</p>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /featureWrap -->
+	
+	<div id="productWrap" class="altWrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h2 class="sectionTitle">Our Templates</h2>
+					<hr/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="work">
+						<div class="imgWrap">
+							<a href="http://bootstrapbay.com/theme/appi-app-landing-page-preview-B8U3Q02?ref=swoopthemes">
+								<img class="img-responsive" src="http://swoopthemes.com/templates/logg/fonts/assets/img/appi.jpg"/>
+							</a>
+						</div>
+						<h4>Appi - App landing page template</h4>
+						<a href="http://bootstrapbay.com/theme/appi-app-landing-page-preview-B8U3Q02?ref=swoopthemes" class="btn btn-primary">View template</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="work">
+						<div class="imgWrap">
+							<a href="http://bootstrapbay.com/theme/jiggy-single-page-portfolio-theme-B9XY4T9?ref=swoopthemes">
+								<img class="img-responsive" src="http://swoopthemes.com/templates/logg/fonts/assets/img/jiggy.jpg"/>
+							</a>
+						</div>
+						<h4>Jiggy - Single page portfolio theme</h4>
+						<a href="http://bootstrapbay.com/theme/jiggy-single-page-portfolio-theme-B9XY4T9?ref=swoopthemes" class="btn btn-primary">View template</a>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="work">
+						<div class="imgWrap">
+							<a href="http://bootstrapbay.com/theme/loggit-login-registration-template-B35SQBX?ref=swoopthemes">
+								<img class="img-responsive" src="http://swoopthemes.com/templates/logg/fonts/assets/img/loggit.jpg"/>
+							</a>
+						</div>
+						<h4>Loggit - Login and registration template</h4>
+						<a href="http://bootstrapbay.com/theme/loggit-login-registration-template-B35SQBX?ref=swoopthemes" class="btn btn-primary">View template</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- /productWrap -->
+	
+	<div id="contactWrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="sectionTitle">Contact Us</h2>
+						<hr/>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<div class="blurb">
+						Need help with our templates? Have a question? Send us a message!
+						</div>
+					</div>
+				</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<a href="http://bootstrapbay.com/user/swoopthemes?ref=swoopthemes" name="submit" type="button" class="btn btn-primary btn-lg">Contact us via BootstrapBay</a>
+						</div>
+					</div>
+			</div>
+	</div> <!-- /contactWrap -->
+	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>Copyright &copy; 2014 SwoopThemes. Built with Bootstrap.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://swoopthemes.com/templates/logg/fonts/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+$(document).ready(function() {
+		
+	$('a[href*=#]:not([href=#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if ($(window).width() < 768) {
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top 
+					}, 1000);
+					return false;
+				}
+			}
+			else {
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top 
+					}, 1000);
+					return false;
+				}
+			}
+
+		}
+	});
+		
+});
+</script>
+
+  </body>
+</html>
