@@ -17,7 +17,7 @@ class EventController < ApplicationController
   end
   def unattend
     @event= Event.find(params[:id])
-    @response=@event.attend(current_user)
+    @response=@event.unattend(current_user)
     respond_to do |format|
       format.json{ render :json => {:stat=>@response} }
     end

@@ -25,7 +25,7 @@ class Event < ActiveRecord::Base
     if self.check_date()
       return "passed"
     else
-      if user.events.delete(@event)
+      if user.events.delete(self)
         return "success"
       else
         return "failed"
