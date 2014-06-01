@@ -65,7 +65,7 @@
                 </p>
               </div>
               <div class="section">
-                <a href="/event/show/<%=event.id%>" class="btn btn-primary custom-button red-btn not-logged">Details</a><br/>
+                <a href="/event/<%=event.id%>" class="btn btn-primary custom-button red-btn not-logged">Details</a><br/>
                 <div style="width:100%">
                 <% if user_signed_in? %>
                 <% if @user_events.include?(event) %>
