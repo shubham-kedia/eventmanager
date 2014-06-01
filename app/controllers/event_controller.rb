@@ -9,39 +9,17 @@ class EventController < ApplicationController
     @event = Event.find(params[:id])
   end
   def attend
-    @event= Event.find(params[:id].to_i)
-    # binding.pry
-    if Time.now.to_i>@event.startfrom.to_i
-      respond_to do |format|
-        format.json{ render :json => {:stat=>"passed"} }
-      end
-    else
-      current_user.events << @event
-      respond_to do |format|
-        if current_user.save
-          format.json{ render :json => {:stat=>"success"} }
-        else
-          format.json{ render :json => {:stat=>"failed"} }
-        end
-      end
+    @event= Event.find(params[:id])
+    @response=@event.attend(current_user)
+    respond_to do |format|
+      format.json{ render :json => {:stat=>@response} }
     end
   end
   def unattend
-    @event= Event.find(params[:id].to_i)
-    # binding.pry
-    if Time.now.to_i>@event.startfrom.to_i
-      respond_to do |format|
-        format.json{ render :json => {:stat=>"passed"} }
-      end
-    else
-      current_user.events.delete(@event)
-      respond_to do |format|
-        if current_user.save
-          format.json{ render :json => {"stat"=>"success"} }
-        else
-          format.json{ render :json => {"stat"=>"failed"} }
-        end
-      end
+    @event= Event.find(params[:id])
+    @response=@event.attend(current_user)
+    respond_to do |format|
+      format.json{ render :json => {:stat=>@response} }
     end
   end
 end

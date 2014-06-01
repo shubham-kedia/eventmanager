@@ -16,7 +16,7 @@ $(document).on('click','.btn-primary',function(){
     data: {'id': id},
     success: function (data) {
       console.log(data);
-      if (data.stat!="passed") {
+      if (data.stat!="passed" && data.stat!="failed") {
         if(url=='/unattend.json'){
           if (data.stat=="success") {
             $(that).removeClass('green-btn')
@@ -33,8 +33,12 @@ $(document).on('click','.btn-primary',function(){
           }
         }
       // end of status passed
-    }else{
+    }else if(data.stat=="passed"){
       $('.modal-body').children('p').html("You Can't Attend or Unattend this event as it is already Passed");
+      $('#mymodal').modal('show')
+    }
+    else{
+      $('.modal-body').children('p').html("Something Went Wrong..!! Please Try Again");
       $('#mymodal').modal('show')
     }
     }// end of success
