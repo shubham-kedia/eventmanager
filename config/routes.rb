@@ -1,14 +1,10 @@
 Eventticketing::Application.routes.draw do
   get '/',to:"event#index"
   devise_for :users
-  devise_scope :users do
-    root :to => 'devise/registrations#new'
-  end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   post '/unattend', to: "event#unattend"
   post '/attend', to: "event#attend"
-  get ':controller(/:action(/:id(.:format)))'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

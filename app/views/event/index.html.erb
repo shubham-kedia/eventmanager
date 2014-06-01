@@ -70,9 +70,9 @@
                 <% if user_signed_in? %>
                 <% if @user_events.include?(event) %>
                 <%#binding.pry%>
-                <a href="/event/unattend/<%=event.id%>" class="btn btn-primary custom-button green-btn" data-id=<%=event.id%>>Unattend</a> 
+                <a href="#" class="btn btn-primary custom-button green-btn" data-id=<%=event.id%>>Unattend</a> 
                 <%else%>               
-                <a href="/event/attend/<%=event.id%>" class="btn btn-primary custom-button blue-btn" data-id=<%=event.id%>>Attend</a> 
+                <a href="#" class="btn btn-primary custom-button blue-btn" data-id=<%=event.id%>>Attend</a> 
                 <%end%>
                 <%else%>
                 <a href="/users/sign_in" class="btn btn-primary custom-button green-btn not-logged">Attend</a> 
