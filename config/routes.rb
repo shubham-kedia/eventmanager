@@ -5,7 +5,7 @@ Eventticketing::Application.routes.draw do
 
   post '/unattend', to: "event#unattend"
   post '/attend', to: "event#attend"
-  
+  resources :event
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
