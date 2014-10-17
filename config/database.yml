@@ -32,8 +32,11 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: eventticketing_production
+  database: mandinko_production
   pool: 5
   username: root
-  password: root
+  password: mandiko
   socket: /var/run/mysqld/mysqld.sock
+  host: mandinko-production.cpd1d27cxsuz.us-east-1.rds.amazonaws.com
+  port: 3306
+  timeout: 5000
